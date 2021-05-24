@@ -34,33 +34,34 @@
 
 # To start of we need to import the 100-english-novels in the data folder of the cds-language github repo.
 import os
-import numpy as np 
 import pandas as pd
 from pathlib import Path
 
 
 def main():
-    data_path = os.path.join("..", "data", "100_english_novels", "corpus") #path.join lets us set the path for our directory that is being used
+    data_path = os.path.join("..", "data", "100_english_novels", "corpus") #set the directory of the files
     table = pd.DataFrame(columns = ["filename", "word_count", "unique_words"])
+    
     for filename in Path(data_path).glob("*.txt"): #Here we have a loop that checks if the textfiles are present and correct.
         with open(filename, "r", encoding="utf-8") as file: 
+            # We save the text as we read the files
             loaded_text = file.read()
+            # Count the words by splitting the text 
             word_count = loaded_text.split()
-            unique_words = set(word_count)     
-            table.append(f"{filename}, {len(word_count)}, {len(unique_words)}")
-#            table_df = table
-#            _df.append(table, ignore_index=True)
-print(table)
+            # Count the unique words with the "set" function
+            unique_words = set(word_count)
+            # Make the count based on the lengths of the unique_words
+            unique_count = len(unique_words)
+            # Create a temporary dataframe with the columns above
+            temp_df = ({'filename': filename, 'word_count': len(word_count), 'unique_words': unique_count})
+            # appending the temporary dataframe to the dataframe "table"
+            table = table.append(temp_df, ignore_index=True)
 
-
-# by appending to the table we get the dataset of textfiles, the word count and the unique words in this. 
-#In this code I tried to save it as a new file in the folder of 100 english novels, but could not make it work. 
+# When saving the output we create an outpath and use the pandas function to_csv to save it as a csv file
+    outpath = os.path.join("..","output","wordcount.csv")
+    table.to_csv(outpath)
         
 
-    outpath = open("../output/wordcount.csv", "a")
-    table.to_csv(outpath)
-
-                
 
 if __name__ == "__main__":
     main()
