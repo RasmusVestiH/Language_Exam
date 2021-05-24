@@ -1,34 +1,31 @@
-#!/usr/bin/env python
-# coding: utf-8
+''' --Assignment 1-- '''
+'''
+Basic scripting with Python
+ 
+Using the corpus called 100-english-novels found on the cds-language GitHub repo, write a Python programme which does the following:
+ 
+Calculate the total word count for each novel
+Calculate the total number of unique words for each novel
+Save result as a single file consisting of three columns: filename, total_words, unique_words
+ 
+ 
+General instructions
 
-# ## Assignment 1
+For this exercise, you can upload either a standalone script OR a Jupyter Notebook
+Save your script as word_counts.py OR word_counts.ipynb
+You can either upload the script/notebook here or push to GitHub and include a link - or both!
+Your code should be clearly documented in a way that allows others to easily follow the structure of your script.
+Similarly, remember to use descriptive variable names! A name like word_count is more readable than wcnt.
 
-# Basic scripting with Python
-# 
-# Using the corpus called 100-english-novels found on the cds-language GitHub repo, write a Python programme which does the following:
-# 
-# Calculate the total word count for each novel
-# Calculate the total number of unique words for each novel
-# Save result as a single file consisting of three columns: filename, total_words, unique_words
-# 
-# 
-# General instructions
-# 
-# For this exercise, you can upload either a standalone script OR a Jupyter Notebook
-# Save your script as word_counts.py OR word_counts.ipynb
-# You can either upload the script/notebook here or push to GitHub and include a link - or both!
-# Your code should be clearly documented in a way that allows others to easily follow the structure of your script.
-# Similarly, remember to use descriptive variable names! A name like word_count is more readable than wcnt.
-# 
-# 
-# Purpose
-# 
-# This assignment is designed to test that you have a understanding of:
-# 
-# how to structure, document, and share a Python script;
-# how to effectively make use of native Python data structures, functions, and flow control;
-# how to load, save, and process text files.
-# 
+
+Purpose
+
+This assignment is designed to test that you have a understanding of:
+ 
+how to structure, document, and share a Python script;
+how to effectively make use of native Python data structures, functions, and flow control;
+how to load, save, and process text files.
+'''
 
 #-----------------Script------------------
 
