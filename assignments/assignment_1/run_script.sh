@@ -16,7 +16,7 @@ test -f requirements.txt && pip install -r requirements.txt
 cd src
 
 #run script
-python 100_novels_script.py  
+python word_counts.py  
 
 #deactivate environment
 deactivate
