@@ -1,0 +1,14 @@
+              precision    recall  f1-score   support
+
+    Season 1       0.30      0.31      0.31       772
+    Season 2       0.26      0.33      0.29      1001
+    Season 3       0.23      0.27      0.25       917
+    Season 4       0.25      0.28      0.26       869
+    Season 5       0.23      0.21      0.22       748
+    Season 6       0.22      0.17      0.19       703
+    Season 7       0.35      0.27      0.31       605
+    Season 8       0.25      0.13      0.17       363
+
+    accuracy                           0.26      5978
+   macro avg       0.26      0.25      0.25      5978
+weighted avg       0.26      0.26      0.26      5978

@@ -1,0 +1,14 @@
+pandas
+spacy
+spacytextblob
+gensim
+matplotlib
+sklearn
+tensorflow
+opencv-python
+numpy
+pyLDAvis
+seaborn
+spacy
+nltk
+pydot

@@ -29,17 +29,20 @@ how to load, save, and process text files.
 
 #-----------------Script------------------
 
-# To start of we need to import the 100-english-novels in the data folder of the cds-language github repo.
+# To start of we need to import the 100-english-novels in the data folder.
 import os
 import pandas as pd
 from pathlib import Path
 
 
 def main():
-    data_path = os.path.join("..", "data", "100_english_novels", "corpus") #set the directory of the files
+    # Set the directory of the files
+    data_path = os.path.join("..", "data", "100_english_novels", "corpus")
+    # Use pandas to create a dataframe with useful columns
     table = pd.DataFrame(columns = ["filename", "word_count", "unique_words"])
     
-    for filename in Path(data_path).glob("*.txt"): #Here we have a loop that checks if the textfiles are present and correct.
+    #Here we have a loop that checks if the textfiles are present and correct.
+    for filename in Path(data_path).glob("*.txt"): 
         with open(filename, "r", encoding="utf-8") as file: 
             # We save the text as we read the files
             loaded_text = file.read()

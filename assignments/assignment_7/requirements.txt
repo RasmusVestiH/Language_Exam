@@ -1,0 +1,15 @@
+pprint
+pandas
+spacy
+numpy
+spacytextblob
+matplotlib
+opencv
+gensim==4.0.0
+matplotlib==3.3.4
+sklearn
+tensorflow
+pyLDAvis==3.2.2
+seaborn==0.11.1
+spacy
+nltk
