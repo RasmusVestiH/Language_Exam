@@ -18,9 +18,9 @@ pip install seaborn
 pip install gensim
 python -m spacy download en_core_web_sm
 
-#cd data 
-#unzip winemag-data_first150k.csv.zip
-#cd ..
+cd data 
+unzip winemag-data_first150k.csv.zip
+cd ..
 
 
 # problems when installing from requirements.txt

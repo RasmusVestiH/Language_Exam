@@ -7,6 +7,7 @@ VENVNAME=as3env
 python3 -m venv $VENVNAME
 source $VENVNAME/bin/activate
 pip install --upgrade pip
+pip install spacy
 python -m spacy download en_core_web_sm
 
 

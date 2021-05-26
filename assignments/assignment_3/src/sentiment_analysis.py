@@ -49,11 +49,10 @@ def main():
     plt.legend(["Weekly rolling average"],
                loc='upper right',
                fontsize= 12)
-    #Save the figure in output
-    plt.savefig('../output/weekly_model.png')
     #Set x ticks to be in years rather than days, this meaning the plot shows years (0 being 2003 and 18 being 2021) 
     plt.xticks(np.arange(0, len(mean_scores)+1,365), range(0,18))
-    
+    #Save the figure in output
+    plt.savefig('../output/weekly_model.png')
     
     #Same process as above for the monthly but 30 as the rolling key instead of 7
     smoothed_sentiment_months = pd.Series(mean_scores).rolling(30).mean()
@@ -73,10 +72,9 @@ def main():
                loc='upper right',
                fontsize= 12)
 
-    #Save the figure in output
-    plt.savefig('../output/monthly_model.png')
     #Set x ticks to be in years again. 
     plt.xticks(np.arange(0, len(mean_scores)+1,365), range(0,18))
-
+    #Save the figure in output
+    plt.savefig('../output/monthly_model.png')
 if __name__ == "__main__":
     main()
